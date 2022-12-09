@@ -44,7 +44,7 @@ public class Contacts extends AbstractNote implements WriteToFileable{
         try {
             FileWriter fileWriter = new FileWriter(fileName,true);
             fileWriter.write(this.getLocalDate()+"\n"+this.phoneNumber+"\n"+this.contactsName+"\n"+
-                    this.phoneNumberType+"\n"+this.getText()+"\n");
+                    this.phoneNumberType+"\n"+this.getText()+"\n"+"\n"+"_______________________________"+"\n");
             System.out.println("Запись сделана");
             fileWriter.close();
         }catch (IOException e){

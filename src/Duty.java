@@ -16,7 +16,8 @@ public class Duty extends Note implements WriteToFileable {
         try {
             FileWriter fileWriter = new FileWriter(fileName,true);
             fileWriter.write("              "+this.getHeader()+"        "+this.getLocalDate()+"\n");
-            fileWriter.write(this.getText()+" должен - "+this.dutySum+"\n");
+            fileWriter.write(this.getText()+" должен - "+this.dutySum+"\n"+"\n"+"_______________________________"+
+                    "\n");
             System.out.println("Запись сделана");
             fileWriter.close();
         }catch (IOException e){

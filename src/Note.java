@@ -23,7 +23,7 @@ public class Note extends AbstractNote implements WriteToFileable{
         try {
             FileWriter fileWriter = new FileWriter(fileName,true);
             fileWriter.write("              "+this.header+"        "+this.getLocalDate()+"\n");
-            fileWriter.write(this.getText()+"\n");
+            fileWriter.write(this.getText()+"\n"+"\n"+"_______________________________"+"\n");
             System.out.println("Запись сделана");
             fileWriter.close();
         }catch (IOException e){
